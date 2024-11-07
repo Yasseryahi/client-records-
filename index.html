@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>سجل العملاء</title>
+</head>
+<body>
+    <button id="search-client-btn">ابحث عن عميل</button>
+    <div id="search-area" style="display: none;">
+        <input type="text" id="client-search" placeholder="ادخل اسم العميل">
+        <button onclick="searchClient()">ابحث</button>
+        <button onclick="showAddClientForm()">+</button>
+    </div>
+    
+    <div id="add-client-form" style="display: none;">
+        <h3>إضافة عميل جديد</h3>
+        <label>هل العميل أول مرة يسوق؟</label><br>
+        <button onclick="startNewClientForm()">نعم</button>
+        <button onclick="openEvaluationForm()">لا</button>
+    </div>
+
+    <div id="evaluation-form" style="display: none;">
+        <h3>نموذج تقييم العميل</h3>
+        <!-- نموذج التقييم بناءً على اختيارك -->
+    </div>
+
+    <script>
+        document.getElementById("search-client-btn").onclick = function() {
+            document.getElementById("search-area").style.display = "block";
+        };
+        
+        function showAddClientForm() {
+            document.getElementById("add-client-form").style.display = "block";
+        }
+
+        function startNewClientForm() {
+            alert("فتح نموذج أكاديمية ياسر يحيى لأول حصة واختيار رقم الحصة");
+            // إضافة كود لعرض نموذج أكاديمية ياسر يحيى والحصص هنا
+        }
+
+        function openEvaluationForm() {
+            alert("فتح نموذج التقييم للعميل ذو الخبرة");
+            // إضافة كود لعرض نموذج التقييم هنا
+        }
+
+        function searchClient() {
+            let clientName = document.getElementById("client-search").value;
+            alert("بحث عن العميل: " + clientName);
+            // يمكنك تطوير كود البحث هنا
+        }
+    </script>
+</body>
+</html>
